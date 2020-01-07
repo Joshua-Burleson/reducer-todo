@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export const initialState =  [{
         task: 'Organize Garage',
         id: 1528817077286,
@@ -19,7 +21,8 @@ export const ToDoReducer = (currentState, action) => {
         case 'TOGGLE_COMPLETE' : 
                             const updatedItem = currentState.findIndex(item => item.id === action.payload.id);
                             const updatedState = [...currentState];
-                            updatedState[updatedItem] = {...updatedState[updatedItem], completed: !updatedState[updatedItem].completed}
+                            const completedDate = updatedState[updatedItem].completed ? null : moment().format('MMM Do YYY [at] h:mm a');
+                            updatedState[updatedItem] = {...updatedState[updatedItem], completed: !updatedState[updatedItem].completed, completedOn: completedDate}
                             return updatedState;
         
         case 'CLEAR_COMPLETED' :

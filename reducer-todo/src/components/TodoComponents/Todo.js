@@ -10,12 +10,13 @@ const ToDo = (props) => {
 
     const ItemContent = <span onClick={() => dispatch({type: 'TOGGLE_COMPLETE', payload: {id: props.item.id}})}>
                             {props.item.task}
-                        </span>
+                        </span>;
     return (
         <>
         {props.item.completed ? <Completed>{ItemContent}</Completed> : <Pending>{ItemContent}</Pending>}
+        {props.item.completed && <p>{`Completed on ${props.item.completedOn}`}</p>}
         </>
-    )
-}
+    );
+};
 
 export default ToDo;

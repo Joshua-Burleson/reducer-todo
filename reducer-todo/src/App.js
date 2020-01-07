@@ -9,7 +9,7 @@ function App() {
   const [state, dispatch] = useReducer(ToDoReducer, initialState);
 
   return (
-    <ToDoContext.Provider value={{state, dispatch}} >
+    <ToDoContext.Provider value={{state, dispatch}}>
     <div className="App">
       <header className="App-header">
         <ToDoList />
