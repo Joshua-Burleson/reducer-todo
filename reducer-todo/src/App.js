@@ -3,7 +3,7 @@ import './App.css';
 import ToDoList from './components/TodoComponents/TodoList';
 
 import ToDoContext from './contexts/ToDoContext';
-import { ToDoReducer, initialState } from './reducers/toDoReducer'
+import { ToDoReducer, initialState } from './reducers/ToDoReducer'
 
 function App() {
   const [state, dispatch] = useReducer(ToDoReducer, initialState);
