@@ -21,7 +21,7 @@ export const ToDoReducer = (currentState, action) => {
         case 'TOGGLE_COMPLETE' : 
                             const updatedItem = currentState.findIndex(item => item.id === action.payload.id);
                             const updatedState = [...currentState];
-                            const completedDate = updatedState[updatedItem].completed ? null : moment().format('MMM Do YYY [at] h:mm a');
+                            const completedDate = updatedState[updatedItem].completed ? null : moment().format('MMM Do YYYY [at] h:mm a');
                             updatedState[updatedItem] = {...updatedState[updatedItem], completed: !updatedState[updatedItem].completed, completedOn: completedDate}
                             return updatedState;
         
