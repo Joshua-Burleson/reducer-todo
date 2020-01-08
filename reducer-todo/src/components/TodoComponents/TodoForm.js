@@ -20,7 +20,7 @@ const ToDoForm = () =>{
         <>
             <form onSubmit={(e) => handleSubmit(e)}>
                 <input onChange={e => handleInputChange(e)} type='text' placeholder="New Task" value={newItem}></input>
-                <input type='submit'></input>
+                <input disabled={newItem.length < 3} type='submit'></input>
             </form>
             <button onClick={() => dispatch({type: 'CLEAR_COMPLETED'})}>Delete Completed</button>
         </>

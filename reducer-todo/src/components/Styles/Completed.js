@@ -7,6 +7,10 @@ export default styled.div`
         background: green;
         color: white;
         text-decoration: line-through;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
     p {
         font-size: 0.75rem;

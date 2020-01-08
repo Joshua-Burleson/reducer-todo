@@ -4,4 +4,8 @@ export default styled.div`
     span {
         background: red;
     }
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
